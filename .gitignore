@@ -1,3 +1,24 @@
+#custom
+*.dll
+*.exe
+*.vcxproj
+*.filters
+Debug static/
+Release static/
+*.tlog
+*.lastbuildstate
+*.idb
+*.log
+
+# Some dll's
+sfml-audio-d-2.dll
+sfml-graphics-d-2.dll
+sfml-network-d-2.dll
+sfml-system-d-2.dll
+sfml-window-d-2.dll
+libsndfile-1.dll
+openal32.dll
+
 #################
 ## Eclipse
 #################
