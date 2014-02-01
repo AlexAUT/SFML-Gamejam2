@@ -19,6 +19,8 @@ namespace aw
 			//Check every dynamic object with every static object (if not bound)
 			for (auto &it : *mDynamixObjectsPtr)
 			{
+				if (it.getImmune())
+					continue;
 				//Check if its bound to a line already
 				if (it.getBoundLine())
 				{

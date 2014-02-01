@@ -22,7 +22,8 @@ namespace aw
 			mLastPosition(position),
 			mSize(size),
 			mVelocity(0,0),
-			mBoundLine(nullptr)
+			mBoundLine(nullptr),
+			mCollisionImmune(false)
 		{
 
 		}
@@ -71,6 +72,11 @@ namespace aw
 				changeState(DynamicState::FALLING);
 		}
 
+		void DynamicObject::setCollisionImmune()
+		{
+			mCollisionImmune = true;
+		}
+
 		const sf::Vector2f &DynamicObject::getPosition() const
 		{
 			return mPosition;
@@ -101,6 +107,16 @@ namespace aw
 			return mState;
 		}
 
+		bool DynamicObject::getImmune()
+		{
+			if (mCollisionImmune)
+			{
+				mCollisionImmune = false;
+				return true;
+			}
+			return mCollisionImmune;
+		}
+
 		void DynamicObject::changeState(DynamicState newState)
 		{
 			mState = newState;
@@ -109,12 +125,12 @@ namespace aw
 
 			switch (mState)
 			{
-			case DynamicState::FALLING: //std::cout << "FALLING"; break;
-			case DynamicState::ON_GROUND: //std::cout << "ON_GROUND"; break;
+			case DynamicState::FALLING: std::cout << "FALLING"; break;
+			case DynamicState::ON_GROUND: std::cout << "ON_GROUND"; break;
 			default: break;
 			}
 
-			//std::cout << std::endl;
+			std::cout << std::endl;
 		}
 	}
 }

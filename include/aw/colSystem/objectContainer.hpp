@@ -10,7 +10,7 @@
 
 namespace sf
 {
-	class RenderWindow;
+	class RenderTarget;
 }
 
 namespace aw
@@ -34,7 +34,7 @@ namespace aw
 			DynObjectsVec *getDynamicObjects();
 
 			//This function may be slow, only for debugging reasons!
-			void drawCollisionLines(sf::RenderWindow &window);
+			void drawCollisionLines(sf::RenderTarget &window);
 
 		private:
 

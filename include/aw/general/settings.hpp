@@ -18,7 +18,7 @@ namespace aw
 	public:
 		struct WindowSettings
 		{
-			sf::Vector2u size = sf::Vector2u(800, 450);
+			sf::Vector2u size = sf::Vector2u(800, 600);
 			std::string title = "";
 			sf::Uint32 style = sf::Style::Default;
 			sf::ContextSettings settings;

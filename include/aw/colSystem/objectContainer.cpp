@@ -2,7 +2,7 @@
 
 #include <assert.h>
 
-#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
 
@@ -45,7 +45,7 @@ namespace aw
 		}
 
 
-		void ObjectContainer::drawCollisionLines(sf::RenderWindow &window)
+		void ObjectContainer::drawCollisionLines(sf::RenderTarget &window)
 		{
 			sf::VertexArray toDraw(sf::Lines, mCollisionLines.size()*2);
 

@@ -3,6 +3,8 @@
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
 
+#include "../game/states/gameState.hpp"
+
 namespace aw
 {
 	Application::Application()
@@ -12,7 +14,8 @@ namespace aw
 		//init Window after loading the settings 
 		initWindow();
 		//Init start state
-		
+		StateMachine::State_ptr game(new GameState(mStateMachine, mWindow, mSettings));
+		mStateMachine.pushState(game);
 	}
 
 	int Application::run()
@@ -21,7 +24,7 @@ namespace aw
 		sf::Clock frameTimer;
 		sf::Time frameTime;
 		//Gameloop
-		while (mWindow.isOpen())
+		while (mWindow.isOpen() && !mStateMachine.isEmpty())
 		{
 			//Calculate frameTime
 			frameTime += frameTimer.restart();
@@ -49,6 +52,7 @@ namespace aw
 			mWindow.display();
 		}
 		
+		mSettings.save();
 		return 0;
 	}
 
