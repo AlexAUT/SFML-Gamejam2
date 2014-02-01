@@ -5,6 +5,7 @@
 #include "../../aw/colSystem/system.hpp"
 
 #include "../player/player.hpp"
+#include "../player/positionTracker.hpp"
 #include "../camera/camera.hpp"
 
 namespace sf
@@ -34,6 +35,8 @@ namespace aw
 		col::System mCollisionSystem;
 
 		Player mPlayer;
+		PositionTracker mTracker;
+		bool mGoingBack;
 
 		Camera mCamera;
 	};

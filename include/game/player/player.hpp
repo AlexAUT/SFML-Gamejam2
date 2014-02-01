@@ -17,7 +17,11 @@ namespace aw
 
 		void update(const sf::Time &frameTime);
 
+		void setPosition(sf::Vector2f position);
 		sf::Vector2f getPosition() const;
+
+		void setVelocity(sf::Vector2f velocity);
+		sf::Vector2f getVelocity() const;
 
 	private:
 

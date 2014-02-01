@@ -40,6 +40,7 @@ namespace aw
 		void DynamicObject::setPosition(const sf::Vector2f &position)
 		{
 			mPosition = position;
+			updatePosition(sf::Time::Zero);
 		}
 
 		void DynamicObject::setLastPosition(const sf::Vector2f &position)

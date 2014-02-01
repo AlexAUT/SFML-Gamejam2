@@ -39,8 +39,23 @@ namespace aw
 		}
 	}
 
+	void Player::setPosition(sf::Vector2f position)
+	{
+		mBody->setPosition(position);
+	}
+
 	sf::Vector2f Player::getPosition() const
 	{
 		return mBody->getPosition();
+	}
+
+	void Player::setVelocity(sf::Vector2f velocity)
+	{
+		mBody->setVelocity(velocity);
+	}
+
+	sf::Vector2f Player::getVelocity() const
+	{
+		return mBody->getVelocity();
 	}
 }
