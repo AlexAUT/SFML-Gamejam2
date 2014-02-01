@@ -1,9 +1,7 @@
-#include <iostream>
+#include "aw/application.hpp"
 
 int main()
 {
-	std::cout << "Hello World!" << std::endl;
-
-	std::cin.get();
-	return 0;
+	aw::Application app;
+	return app.run();
 }
