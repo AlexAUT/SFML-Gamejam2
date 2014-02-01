@@ -16,10 +16,10 @@ namespace aw
 		mGoingBack(false)
 	{
 		//Load the map
-		loadMap("data/levels/test.txt", mCollisionSystem.getObjectContainer());
+		loadMap("data/levels/test.txt", mCollisionSystem.getObjectContainer(), mEnemySpawner);
 		//Add player to the collision system
 		mCollisionSystem.getObjectContainer().addDynamicObject({ 25.f, 0.f }, { 35.f, 35.f });
-		mPlayer.setPlayer(&mCollisionSystem.getObjectContainer().getDynamicObjects()->at(0));
+		mPlayer.setPlayer(&*mCollisionSystem.getObjectContainer().getDynamicObjects().front());
 		//Setup the default view for the camera
 		mCamera.setDefaultView(mWindow.getDefaultView());
 	}
@@ -55,6 +55,9 @@ namespace aw
 			mTracker.update(frameTime, mPlayer.getPosition(), mPlayer.getVelocity());
 			//Update Enviroment
 			mCollisionSystem.update(frameTime);
+			//Update enemies
+			for (auto &it : mEnemySpawner)
+				it.update(frameTime);
 		}
 
 		//Update camera
@@ -65,6 +68,10 @@ namespace aw
 	{
 		target.setView(mCamera.getGameView());
 		mCollisionSystem.getObjectContainer().drawCollisionLines(target);
+		//Render Enemies
+		for (auto &it : mEnemySpawner)
+			it.render(target);
+		mPlayer.render(target);
 		target.setView(mCamera.getDefaultView());
 	}
 }

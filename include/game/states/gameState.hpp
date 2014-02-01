@@ -1,12 +1,16 @@
 #ifndef GAMESTATE_HPP
 #define GAMESTATE_HPP
 
+#include <vector>
+
 #include "../../aw/states/state.hpp"
 #include "../../aw/colSystem/system.hpp"
 
 #include "../player/player.hpp"
 #include "../player/positionTracker.hpp"
 #include "../camera/camera.hpp"
+
+#include "../spawner/enemySpawner.hpp"
 
 namespace sf
 {
@@ -37,6 +41,8 @@ namespace aw
 		Player mPlayer;
 		PositionTracker mTracker;
 		bool mGoingBack;
+
+		std::vector<EnemySpawner> mEnemySpawner;
 
 		Camera mCamera;
 	};

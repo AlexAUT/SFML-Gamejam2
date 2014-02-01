@@ -24,7 +24,7 @@ namespace aw
 		std::deque<std::array<sf::Vector2f, 2>> mPastPositions;
 
 		sf::Time mSinceLastSave;
-		sf::Time mBetweenSaves = sf::seconds(0.1f);
+		sf::Time mBetweenSaves = sf::seconds(0.016f);
 
 		float mPercentage = 0.f;
 	};

@@ -35,6 +35,7 @@ namespace aw
 			void changeVelocity(const sf::Vector2f &value);
 			void setBoundLine(CollisionLine *ptr);
 			void setCollisionImmune();
+			void setAlive(bool val);
 
 			const sf::Vector2f &getPosition() const;
 			const sf::Vector2f &getLastPosition() const;
@@ -43,7 +44,7 @@ namespace aw
 			const CollisionLine *getBoundLine() const;
 			DynamicState getState() const;
 			bool getImmune();
-
+			bool isAlive() const;
 
 			void changeState(DynamicState newState);
 		private:
@@ -60,6 +61,7 @@ namespace aw
 			CollisionLine *mBoundLine;
 
 			bool mCollisionImmune;
+			bool mAlive;
 		};
 	}
 }

@@ -19,24 +19,24 @@ namespace aw
 			//Check every dynamic object with every static object (if not bound)
 			for (auto &it : *mDynamixObjectsPtr)
 			{
-				if (it.getImmune())
+				if (it->getImmune())
 					continue;
 				//Check if its bound to a line already
-				if (it.getBoundLine())
+				if (it->getBoundLine())
 				{
 					//Do some stuff
-					if (!checkWhenBound(it))
+					if (!checkWhenBound(*it))
 					{
 						//The dynamicObject got off the line, 
 						//No it has no bound line -> check for collision
-						it.setLastPosition(sf::Vector2f(it.getLastPosition().x, it.getLastPosition().y - 5.f));
-						checkForCollision(it);
+						it->setLastPosition(sf::Vector2f(it->getLastPosition().x, it->getLastPosition().y - 5.f));
+						checkForCollision(*it);
 					}
 				}
 				else
 				{
 					//Check for collision
-					checkForCollision(it);
+					checkForCollision(*it);
 				}
 			}
 		}
@@ -79,15 +79,15 @@ namespace aw
 			for (auto &it : *mCollisionLinesPtr)
 			{
 				sf::Vector2f collisionPoint;
-				if (isIntersecting(southCurrent, southLastFrame, it.getPoint(0), it.getPoint(1), collisionPoint))
+				if (isIntersecting(southCurrent, southLastFrame, it->getPoint(0), it->getPoint(1), collisionPoint))
 				{
 					//Inform the dynamic objects its now bound to a line (this in only for performance reason needed)
-					obj.setBoundLine(&it);
+					obj.setBoundLine(&*it);
 					//Set position to the collisionPoint
 					sf::Vector2f newPos = sf::Vector2f(collisionPoint.x - (obj.getSize().x / 2.f), collisionPoint.y - obj.getSize().y);
 					obj.setPosition(newPos);
 					//Increase/Decrease the X speed, to simulate a impact
-					float addToXVelocity = obj.getVelocity().y * -0.5f * it.getSlope();
+					float addToXVelocity = obj.getVelocity().y * -0.5f * it->getSlope();
 					obj.changeVelocity(sf::Vector2f(addToXVelocity, 0));
 					//Set the y-Velocity to 0, stop falling through the line
 					obj.setVelocity(sf::Vector2f(obj.getVelocity().x, 0));

@@ -2,6 +2,8 @@
 #define AWCOLOBJECTCONTAINER_HPP
 
 #include <vector>
+#include <list>
+#include <memory>
 
 #include <SFML/System/Vector2.hpp>
 
@@ -17,8 +19,11 @@ namespace aw
 {
 	namespace col
 	{
-		typedef std::vector<CollisionLine> ColLinesVec;
-		typedef std::vector<DynamicObject> DynObjectsVec;
+		typedef std::unique_ptr<CollisionLine> ColLinePtr;
+		typedef std::unique_ptr<DynamicObject> DynObjectPtr;
+
+		typedef std::vector<ColLinePtr> ColLinesVec;
+		typedef std::list<DynObjectPtr> DynObjectsVec;
 
 		class ObjectContainer
 		{
@@ -28,10 +33,10 @@ namespace aw
 			void removeCollisionLine(std::size_t index);
 
 			void addDynamicObject(const sf::Vector2f &position, const sf::Vector2f &size);
-			void removeDynamicObject(std::size_t index);
+			void removeDynamicDeadObjects();
 
-			ColLinesVec *getCollisionLines();
-			DynObjectsVec *getDynamicObjects();
+			ColLinesVec &getCollisionLines();
+			DynObjectsVec &getDynamicObjects();
 
 			//This function may be slow, only for debugging reasons!
 			void drawCollisionLines(sf::RenderTarget &window);

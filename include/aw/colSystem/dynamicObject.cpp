@@ -23,7 +23,8 @@ namespace aw
 			mSize(size),
 			mVelocity(0,0),
 			mBoundLine(nullptr),
-			mCollisionImmune(false)
+			mCollisionImmune(false),
+			mAlive(true)
 		{
 
 		}
@@ -78,6 +79,11 @@ namespace aw
 			mCollisionImmune = true;
 		}
 
+		void DynamicObject::setAlive(bool val)
+		{
+			mAlive = val;
+		}
+
 		const sf::Vector2f &DynamicObject::getPosition() const
 		{
 			return mPosition;
@@ -116,6 +122,11 @@ namespace aw
 				return true;
 			}
 			return mCollisionImmune;
+		}
+
+		bool DynamicObject::isAlive() const
+		{
+			return mAlive;
 		}
 
 		void DynamicObject::changeState(DynamicState newState)

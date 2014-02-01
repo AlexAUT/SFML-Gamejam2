@@ -13,9 +13,9 @@ namespace aw
 		if (mSinceLastSave > mBetweenSaves)
 		{
 			mSinceLastSave -= mBetweenSaves;
-			std::array<sf::Vector2f, 2> temp = { position, velocity };
+			std::array<sf::Vector2f, 2> temp = { sf::Vector2f(position.x, position.y - 0.5f), velocity };
 			mPastPositions.push_back(temp);
-			if (mPastPositions.size() > static_cast<unsigned int>(5.f / mBetweenSaves.asSeconds()))
+			if (mPastPositions.size() > static_cast<unsigned int>(2.5f / mBetweenSaves.asSeconds()))
 			{
 				mPastPositions.pop_front();
 			}

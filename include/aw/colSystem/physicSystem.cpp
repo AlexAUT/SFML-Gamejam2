@@ -29,18 +29,18 @@ namespace aw
 				//Add to every object the mGravitation
 				for (auto &it : *mDynamicObjects)
 				{
-					if (it.getState() == DynamicState::ON_GROUND)
+					if (it->getState() == DynamicState::ON_GROUND)
 					{
 						
 						//Rolling depends on the slope of the line
-						float accerlerationX = it.getBoundLine()->getSlope() * -0.5f * mGravitation;
+						float accerlerationX = it->getBoundLine()->getSlope() * -0.5f * mGravitation;
 						////std::cout << "Accerleration X: " << accerlerationX << std::endl;
-						it.changeVelocity(sf::Vector2f(accerlerationX * deltaTime.asSeconds(), 0));
+						it->changeVelocity(sf::Vector2f(accerlerationX * deltaTime.asSeconds(), 0));
 						//Now adjust the yVelocity to match
 					}
-					else if (it.getState() == DynamicState::FALLING)
+					else if (it->getState() == DynamicState::FALLING)
 					{
-						it.changeVelocity(sf::Vector2f(0, mGravitation * deltaTime.asSeconds()));
+						it->changeVelocity(sf::Vector2f(0, mGravitation * deltaTime.asSeconds()));
 					}
 				}
 			}
