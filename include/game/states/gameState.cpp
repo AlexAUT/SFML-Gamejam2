@@ -15,6 +15,8 @@ namespace aw
 		mCollisionSystem.getObjectContainer().addCollisionLine({ 0.f, 500.f }, { 500.f, 600.f });
 		mCollisionSystem.getObjectContainer().addDynamicObject({ 25.f, 0.f }, { 35.f, 35.f });
 		mPlayer.setPlayer(&mCollisionSystem.getObjectContainer().getDynamicObjects()->at(0));
+
+		mCamera.setDefaultView(mWindow.getDefaultView());
 	}
 
 	void GameState::processEvent(const sf::Event &event)
@@ -29,10 +31,14 @@ namespace aw
 		mPlayer.update(frameTime);
 		//Update Enviroment
 		mCollisionSystem.update(frameTime);
+		//Update camera
+		mCamera.update(mPlayer.getPosition());
 	}
 
 	void GameState::render(sf::RenderTarget &target)
 	{
+		target.setView(mCamera.getGameView());
 		mCollisionSystem.getObjectContainer().drawCollisionLines(target);
+		target.setView(mCamera.getDefaultView());
 	}
 }

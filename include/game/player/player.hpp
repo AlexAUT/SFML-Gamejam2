@@ -17,6 +17,8 @@ namespace aw
 
 		void update(const sf::Time &frameTime);
 
+		sf::Vector2f getPosition() const;
+
 	private:
 
 	private:

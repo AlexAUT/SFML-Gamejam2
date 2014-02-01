@@ -38,4 +38,9 @@ namespace aw
 			}
 		}
 	}
+
+	sf::Vector2f Player::getPosition() const
+	{
+		return mBody->getPosition();
+	}
 }
