@@ -42,11 +42,12 @@ namespace aw
 			if (mPercentage < 1.f)
 			{
 				//Get dir vector (Last point to -1last point
-				sf::Vector2f dir = mPastPositions[mPastPositions.size() - 2][0] - mPastPositions.back()[0];
+				auto it = mPastPositions.rbegin()++;
+				sf::Vector2f dir = it->at(0) - mPastPositions.back()[0];
 				//Get final position
 				sf::Vector2f newPosition = mPastPositions.back()[0] + (mPercentage * dir);
 				//Same for velocity (interpolation
-				sf::Vector2f vel = mPastPositions[mPastPositions.size() - 2][1] - mPastPositions.back()[1];
+				sf::Vector2f vel = it->at(1) - mPastPositions.back()[1];
 				//Get final velocity
 				sf::Vector2f newVelocity = mPastPositions.back()[1] + (mPercentage * vel);
 				std::array<sf::Vector2f, 2> returnValue = { newPosition, newVelocity };

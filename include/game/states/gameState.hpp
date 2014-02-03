@@ -3,14 +3,16 @@
 
 #include <vector>
 
-#include "../../aw/states/state.hpp"
-#include "../../aw/colSystem/system.hpp"
+#include <SFML/Audio/Music.hpp>
 
-#include "../player/player.hpp"
+#include "../../aw/states/state.hpp"
+
 #include "../player/positionTracker.hpp"
 #include "../camera/camera.hpp"
+#include "../misc/introMessage.hpp"
+#include "../player/player.hpp"
 
-#include "../spawner/enemySpawner.hpp"
+#include "../map/map.hpp"
 
 namespace sf
 {
@@ -24,7 +26,7 @@ namespace aw
 	class GameState : public State
 	{
 	public:
-		GameState(StateMachine &statemachine, sf::RenderWindow &winow, Settings &settings);
+		GameState(StateMachine &statemachine, sf::RenderWindow &winow, Settings &settings, const std::string &path);
 
 		void processEvent(const sf::Event &event);
 		void update(const sf::Time &frameTime);
@@ -32,19 +34,34 @@ namespace aw
 
 	private:
 
+		void loadLevel();
+
 	private:
 		sf::RenderWindow &mWindow;
 		Settings &mSettings;
 
-		col::System mCollisionSystem;
+		std::string mPath;
 
-		Player mPlayer;
+		enum class GameStatus
+		{
+			INTRO,
+			RUNNING,
+			PAUSED,
+			CRASHED,
+			FINISHED
+		}mGameStatus;
+
 		PositionTracker mTracker;
 		bool mGoingBack;
 
-		std::vector<EnemySpawner> mEnemySpawner;
-
 		Camera mCamera;
+
+		Player mPlayer;
+		Map mMap;
+
+		IntroMessage mIntroMessage;
+
+		sf::Music mMusic;
 	};
 }
 #endif

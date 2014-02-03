@@ -9,7 +9,7 @@
 
 namespace aw
 {
-	bool loadMap(const std::string &path, col::ObjectContainer &container, std::vector<EnemySpawner> &enemySpawners);
+	
 }
 
 #endif

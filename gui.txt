@@ -1,0 +1,184 @@
+Window:
+{
+	Panel: "mainLayer"
+	{
+		Left = 0
+		Top = 0
+		Width = 800
+		Height = 600
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (0,0,0,0)
+
+		Button: "btPlayer"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 290
+			Top = 166
+			Width = 191
+			Height = 47
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 1
+			Text = "Play"
+			TextColor = (0,0,0,255)
+			TextSize = 25
+		}
+
+		Button: "btOptions"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 290
+			Top = 226
+			Width = 191
+			Height = 47
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 2
+			Text = "Options"
+			TextColor = (0,0,0,255)
+			TextSize = 25
+		}
+
+		Button: "btCredits"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 290
+			Top = 286
+			Width = 191
+			Height = 47
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 3
+			Text = "Credits"
+			TextColor = (0,0,0,255)
+			TextSize = 25
+		}
+
+		Button: "btHelp"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 290
+			Top = 346
+			Width = 191
+			Height = 47
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 4
+			Text = "Help"
+			TextColor = (0,0,0,255)
+			TextSize = 25
+		}
+
+		Button: "btClose"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 290
+			Top = 470
+			Width = 191
+			Height = 47.3554
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 5
+			Text = "Close"
+			TextColor = (0,0,0,255)
+			TextSize = 25
+		}
+
+	}
+
+	Panel: "playLayer"
+	{
+		Left = 0
+		Top = 0
+		Width = 800
+		Height = 600
+		Visible = false
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (0,0,0,0)
+
+		Button: "Button1"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 120
+			Top = 160
+			Width = 90
+			Height = 59.2683
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 101
+			Text = "1"
+			TextColor = (0,0,0,255)
+			TextSize = 36
+		}
+
+		Button: "Button2"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 225
+			Top = 160
+			Width = 90
+			Height = 60
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 102
+			Text = "2"
+			TextColor = (0,0,0,255)
+			TextSize = 37
+		}
+
+		Button: "Button3"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 330
+			Top = 160
+			Width = 90
+			Height = 60
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 103
+			Text = "3"
+			TextColor = (0,0,0,255)
+			TextSize = 37
+		}
+
+		Button: "back"
+		{
+			ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+			Left = 290
+			Top = 470
+			Width = 191
+			Height = 47.3554
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 10
+			Text = "Back"
+			TextColor = (0,0,0,255)
+			TextSize = 25
+		}
+
+	}
+
+}

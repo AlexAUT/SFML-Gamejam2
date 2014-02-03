@@ -1,0 +1,168 @@
+Window:
+{
+	Panel: "mainlayer"
+	{
+		Left = 0
+		Top = 0
+		Width = 800
+		Height = 450
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (0,0,0,0)
+
+		Button: "Button1"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 280
+			Top = 160
+			Width = 240
+			Height = 30
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 1
+			Text = "Singleplayer"
+			TextColor = (200,200,200,255)
+			TextSize = 18
+		}
+
+		Button: "Button1"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 280
+			Top = 200
+			Width = 240
+			Height = 30
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 2
+			Text = "multiplayer"
+			TextColor = (200,200,200,255)
+			TextSize = 18
+		}
+
+		Button: "Button2"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 280
+			Top = 240
+			Width = 240
+			Height = 30
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 3
+			Text = "Custom Map"
+			TextColor = (200,200,200,255)
+			TextSize = 18
+		}
+
+		Button: "Button3"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 300
+			Top = 300
+			Width = 200
+			Height = 30
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 4
+			Text = "Options"
+			TextColor = (200,200,200,255)
+			TextSize = 18
+		}
+
+		Button: "Button4"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 300
+			Top = 340
+			Width = 200
+			Height = 30
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 5
+			Text = "Credits"
+			TextColor = (200,200,200,255)
+			TextSize = 18
+		}
+
+		Button: "Button5"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 320
+			Top = 400
+			Width = 160
+			Height = 30
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 6
+			Text = "Close"
+			TextColor = (200,200,200,255)
+			TextSize = 18
+		}
+
+	}
+
+	Panel: "creditsmenu"
+	{
+		Left = 0
+		Top = 0
+		Width = 800
+		Height = 450
+		Visible = false
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (0,0,0,0)
+
+		ChatBox: "ChatBox1"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 60
+			Top = 110
+			Width = 680
+			Height = 260
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			TextSize = 15
+			Borders = (2,2,2,2)
+			BackgroundColor = (50,50,50,255)
+			BorderColor = (0,0,0,255)
+			Lines = "(Developed by Alexander Weinrauch (AlexAUT).\n\n\,(255\,255\,255)),(  \,(0\,0\,0)),(Laurent Gomila for SFML!\n\,(255\,255\,255)),(Bruno Van de Velde for tgui! (gui system)\n\,(255\,255\,255)),(fallahn for sfChat (Chat system)\n\,(255\,255\,255)),(MafiaFLairBeatz for the music!\n\,(255\,255\,255)),(Alexandre Bodelot\n\,(255\,255\,255)),(Lukas Dürrenberger\n\,(255\,255\,255))"
+		}
+
+		Button: "Button1"
+		{
+			ConfigFile = "data/tgui/widgets/Black.conf"
+			Left = 300
+			Top = 400
+			Width = 200
+			Height = 30
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			Callback = LeftMouseReleased
+			CallbackId = 10
+			Text = "Back"
+			TextColor = (200,200,200,255)
+			TextSize = 18
+		}
+
+	}
+
+}

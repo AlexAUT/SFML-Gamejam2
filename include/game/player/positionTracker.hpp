@@ -4,7 +4,7 @@
 #include <SFML/System/Vector2.hpp>
 #include <SFML/System/Time.hpp>
 
-#include <deque>
+#include <list>
 #include <array>
 
 namespace aw
@@ -21,7 +21,7 @@ namespace aw
 	private:
 
 	private:
-		std::deque<std::array<sf::Vector2f, 2>> mPastPositions;
+		std::list<std::array<sf::Vector2f, 2>> mPastPositions;
 
 		sf::Time mSinceLastSave;
 		sf::Time mBetweenSaves = sf::seconds(0.016f);

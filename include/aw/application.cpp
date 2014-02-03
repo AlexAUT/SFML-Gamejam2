@@ -3,7 +3,7 @@
 #include <SFML/System/Clock.hpp>
 #include <SFML/Window/Event.hpp>
 
-#include "../game/states/gameState.hpp"
+#include "../game/states/menuState.hpp"
 
 namespace aw
 {
@@ -14,13 +14,21 @@ namespace aw
 		//init Window after loading the settings 
 		initWindow();
 		//Init start state
-		StateMachine::State_ptr game(new GameState(mStateMachine, mWindow, mSettings));
+		StateMachine::State_ptr game(new MenuState(mStateMachine, mWindow, mSettings));
 		mStateMachine.pushState(game);
+
+		//Temp
+		mFont.loadFromFile("data/fonts/xirod.ttf");
+		mFpsDisplay.setFont(mFont);
+		mFpsDisplay.setColor(sf::Color::Red);
+		mFpsDisplay.setCharacterSize(15);
+		//
 	}
 
 	int Application::run()
 	{
 		//Frametime timer
+		sf::Clock fpsTimer;
 		sf::Clock frameTimer;
 		sf::Time frameTime;
 		//Gameloop
@@ -46,9 +54,13 @@ namespace aw
 				//Update the gamelogic with logicTick
 				mStateMachine.update(mSettings.applicationSettings.logicTick);
 			}
+			//Temp
+			mFpsDisplay.setString(std::to_string(static_cast<int>(1.f / fpsTimer.restart().asSeconds())));
 			//Rendering
 			mWindow.clear(mSettings.windowSettings.clearColor);
 			mStateMachine.render(mWindow);
+
+			mWindow.draw(mFpsDisplay);
 			mWindow.display();
 		}
 		
@@ -63,5 +75,6 @@ namespace aw
 		mWindow.create(mode, mSettings.windowSettings.title, mSettings.windowSettings.style, mSettings.windowSettings.settings);
 		//Set vsync
 		mWindow.setVerticalSyncEnabled(mSettings.windowSettings.vsync);
+		mWindow.setVerticalSyncEnabled(true);
 	}
 }

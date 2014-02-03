@@ -1,0 +1,71 @@
+[message]
+Now you can die!
+
+Just time your jumps right
+and don't touch the yellow parts of the map.
+
+Press B to go back in time if you fail a jump!
+
+Remember hold space longer for higher jumps
+
+[/message]
+[finishMessage]
+Great you completed the thirdlevel!
+
+Press ENTER to load the next one
+or press ESCAPE to return to menu
+[/finishMessage]
+[finish]
+13600
+[static]
+0 305 715 20
+715 325 0 0
+885 325 440 -20
+1495 275 680 20
+2415 420 580 25
+2995 445 0 0
+3240 405 655 -25
+3895 380 0 0
+3240 90 30 195
+3895 385 -20 -55
+4005 405 20 -75
+4025 330 0 0
+4005 405 550 -20
+4555 385 -20 -40
+4535 345 0 0
+4730 350 20 55
+4750 405 250 -20
+5000 385 0 0
+5175 330 -75 -20
+5100 310 435 20
+5535 330 5 85
+5740 415 535 -25
+6485 390 455 -30
+7185 360 395 -35
+7770 275 310 -25
+8305 220 385 -25
+9085 340 495 25
+9580 365 -25 -60
+9555 305 0 0
+9660 310 25 55
+9685 365 300 -25
+9985 340 0 0
+9685 315 -25 -10
+9980 365 25 -55
+10190 305 25 60
+10215 365 430 -25
+10645 340 -25 -40
+10880 305 25 60
+10905 365 390 -25
+11285 365 30 -85
+11670 470 20 100
+11690 570 470 -30
+12380 430 415 35
+12375 635 460 35
+12985 535 620 30
+13605 565 0 0
+[/static]
+[deathZones]
+0 480 11670 85
+12155 720 2170 70
+[/deathZones]

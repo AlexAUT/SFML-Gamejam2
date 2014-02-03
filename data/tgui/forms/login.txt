@@ -1,0 +1,155 @@
+Window:
+{
+	Label: "Label1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 180
+		Top = 90
+		Width = 154
+		Height = 15
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "Username:"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		BackgroundColor = (0,0,0,0)
+		AutoSize = true
+	}
+
+	EditBox: "EditBox1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 180
+		Top = 120
+		Width = 290
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = ""
+		TextSize = 18
+		MaximumCharacters = 0
+		Borders = (6,4,6,4)
+		TextColor = (200,200,200,255)
+		SelectedTextColor = (255,255,255,255)
+		SelectedTextBackgroundColor = (10,110,255,255)
+		SelectionPointColor = (110,110,255,255)
+		LimitTextWidth = false
+		SelectionPointWidth = 2
+		NumbersOnly = false
+	}
+
+	Label: "Label2"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 180
+		Top = 170
+		Width = 154
+		Height = 15
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "Password:"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		BackgroundColor = (0,0,0,0)
+		AutoSize = true
+	}
+
+	EditBox: "EditBox2"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 180
+		Top = 200
+		Width = 290
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = ""
+		TextSize = 18
+		MaximumCharacters = 0
+		Borders = (6,4,6,4)
+		TextColor = (200,200,200,255)
+		SelectedTextColor = (255,255,255,255)
+		SelectedTextBackgroundColor = (10,110,255,255)
+		SelectionPointColor = (110,110,255,255)
+		LimitTextWidth = false
+		SelectionPointWidth = 2
+		NumbersOnly = false
+	}
+
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 180
+		Top = 260
+		Width = 170
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 51
+		Text = "Login"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button2"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 180
+		Top = 340
+		Width = 240
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 52
+		Text = "Join as Guest"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button3"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 180
+		Top = 300
+		Width = 260
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 53
+		Text = "Create account"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button4"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 300
+		Top = 400
+		Width = 200
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 54
+		Text = "Back"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+}

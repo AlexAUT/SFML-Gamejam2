@@ -2,6 +2,7 @@
 #define APPLICATION_HPP
 
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 #include "general\settings.hpp"
 #include "states\stateMachine.hpp"
@@ -25,6 +26,11 @@ namespace aw
 
 		Settings mSettings;
 		StateMachine mStateMachine;
+
+		//Temp
+		sf::Font mFont;
+		sf::Text mFpsDisplay;
+		//
 	};
 }
 

@@ -1,0 +1,171 @@
+Window:
+{
+	Panel: "onStartLayer"
+	{
+		Left = 0
+		Top = 0
+		Width = 800
+		Height = 450
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (0,0,0,0)
+
+		Label: ""
+		{
+			ConfigFile = ""
+			Left = 135
+			Top = 135
+			Width = 563
+			Height = 23
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			Text = "Enter: start the game"
+			TextColor = (0,192,255,255)
+			TextSize = 30
+			BackgroundColor = (0,0,0,0)
+			AutoSize = true
+		}
+
+		Label: ""
+		{
+			ConfigFile = ""
+			Left = 190
+			Top = 250
+			Width = 393
+			Height = 16
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			Text = "Escape: return to menu"
+			TextColor = (255,255,255,255)
+			TextSize = 20
+			BackgroundColor = (0,0,0,0)
+			AutoSize = true
+		}
+
+	}
+
+	Panel: "crashedLayer"
+	{
+		Left = 0
+		Top = 0
+		Width = 800
+		Height = 450
+		Visible = false
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (0,0,0,0)
+
+		Label: ""
+		{
+			ConfigFile = ""
+			Left = 65
+			Top = 135
+			Width = 655
+			Height = 16
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			Text = "Enter: Start the Game from checkpoint"
+			TextColor = (0,192,255,255)
+			TextSize = 20
+			BackgroundColor = (0,0,0,0)
+			AutoSize = true
+		}
+
+		Label: ""
+		{
+			ConfigFile = ""
+			Left = 65
+			Top = 250
+			Width = 651
+			Height = 16
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			Text = "Back space: Start the game from Start"
+			TextColor = (255,255,255,255)
+			TextSize = 20
+			BackgroundColor = (0,0,0,0)
+			AutoSize = true
+		}
+
+	}
+
+	Panel: "finishedLayer"
+	{
+		Left = 0
+		Top = 0
+		Width = 800
+		Height = 450
+		Visible = false
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (0,0,0,0)
+
+		Label: ""
+		{
+			ConfigFile = ""
+			Left = 40
+			Top = 80
+			Width = 712
+			Height = 20
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			Text = "Great you have completed this level!"
+			TextColor = (0,192,255,255)
+			TextSize = 23
+			BackgroundColor = (0,0,0,0)
+			AutoSize = true
+		}
+
+		Label: ""
+		{
+			ConfigFile = ""
+			Left = 90
+			Top = 170
+			Width = 389
+			Height = 18
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			Text = "Enter: load next level"
+			TextColor = (255,255,255,255)
+			TextSize = 20
+			BackgroundColor = (0,0,0,0)
+			AutoSize = true
+		}
+
+		Label: ""
+		{
+			ConfigFile = ""
+			Left = 90
+			Top = 210
+			Width = 351
+			Height = 16
+			Visible = true
+			Enabled = true
+			Transparency = 255
+			CallbackId = 0
+			Text = "Escape: back to menu"
+			TextColor = (255,255,255,255)
+			TextSize = 20
+			BackgroundColor = (0,0,0,0)
+			AutoSize = true
+		}
+
+	}
+
+}

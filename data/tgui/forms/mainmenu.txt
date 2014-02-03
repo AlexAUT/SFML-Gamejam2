@@ -1,0 +1,105 @@
+Window:
+{
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 280
+		Top = 160
+		Width = 240
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 1
+		Text = "Singleplayer"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 280
+		Top = 200
+		Width = 240
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 2
+		Text = "multiplayer"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button2"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 280
+		Top = 240
+		Width = 240
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 3
+		Text = "Custom Map"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button3"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 300
+		Top = 300
+		Width = 200
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 4
+		Text = "Options"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button4"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 300
+		Top = 340
+		Width = 200
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 5
+		Text = "Credits"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button5"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 320
+		Top = 400
+		Width = 160
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 6
+		Text = "Close"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+}

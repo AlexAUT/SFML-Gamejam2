@@ -1,0 +1,78 @@
+Window:
+{
+	ListBox: "levelList"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 310
+		Top = 180
+		Width = 237
+		Height = 100
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		BackgroundColor = (50,50,50,255)
+		TextColor = (200,200,200,255)
+		SelectedBackgroundColor = (10,110,255,255)
+		SelectedTextColor = (255,255,255,255)
+		BorderColor = (0,0,0,255)
+		ItemHeight = 24
+		MaximumItems = 0
+		Borders = (2,2,2,2)
+		Items = ""
+		SelectedItem = -1
+	}
+
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 580
+		Top = 210
+		Width = 160
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 32
+		Text = "Start"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Label: "Label1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 60
+		Top = 220
+		Width = 226
+		Height = 17
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "Select a Level"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		BackgroundColor = (0,0,0,0)
+		AutoSize = true
+	}
+
+	Button: "Button2"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 330
+		Top = 380
+		Width = 180
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 33
+		Text = "Back"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+}

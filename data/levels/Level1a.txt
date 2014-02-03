@@ -1,0 +1,15 @@
+[message]
+This level do not contain any enemy
+or tricky jumps!
+Just get used to the controls.
+Have fun! ;)
+
+Controls:
+Arrow Left/Right: Move
+Space: jump
+[/message]
+[static]
+0 250 250 50 255 0 255 
+250 225 600 50 0 255 255
+0 200 100 10 255 255 0
+[/static]

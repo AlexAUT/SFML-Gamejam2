@@ -1,0 +1,160 @@
+Window:
+{
+	Checkbox: "cbFullscreen"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 260
+		Top = 132
+		Width = 20
+		Height = 20
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Checked = false
+		Text = "Fullscreen"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		AllowTextClick = true
+	}
+
+	Checkbox: "cbAntia"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 260
+		Top = 190
+		Width = 20
+		Height = 20
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Checked = false
+		Text = "Antialiasing"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		AllowTextClick = true
+	}
+
+	Slider: "slMusic"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 470
+		Top = 253
+		Width = 116
+		Height = 9.4309
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Minimum = 0
+		Maximum = 100
+		Value = 25
+		VerticalScroll = false
+	}
+
+	Label: "Label1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 260
+		Top = 250
+		Width = 195
+		Height = 17
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "Music volume"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		BackgroundColor = (0,0,0,0)
+		AutoSize = true
+	}
+
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 320
+		Top = 390
+		Width = 160
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 21
+		Text = "Back"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button2"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 240
+		Top = 340
+		Width = 320
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "Restore default"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Label: "Label2"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 260
+		Top = 280
+		Width = 171
+		Height = 17
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "VFX volume"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		BackgroundColor = (0,0,0,0)
+		AutoSize = true
+	}
+
+	Slider: "slVFX"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 470
+		Top = 283
+		Width = 116
+		Height = 9.84375
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Minimum = 0
+		Maximum = 100
+		Value = 25
+		VerticalScroll = false
+	}
+
+	Checkbox: "cbShaders"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 260
+		Top = 160
+		Width = 20
+		Height = 20
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Checked = false
+		Text = "Shader Effects"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+		AllowTextClick = true
+	}
+
+}

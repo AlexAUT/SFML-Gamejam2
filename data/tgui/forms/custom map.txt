@@ -1,0 +1,79 @@
+Window:
+{
+	Label: "Label1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 40
+		Top = 200
+		Width = 89
+		Height = 16
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "Name:"
+		TextColor = (200,200,200,255)
+		TextSize = 20
+		BackgroundColor = (0,0,0,0)
+		AutoSize = true
+	}
+
+	EditBox: "EditBox1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 140
+		Top = 190
+		Width = 270
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = ""
+		TextSize = 18
+		MaximumCharacters = 0
+		Borders = (6,4,6,4)
+		TextColor = (200,200,200,255)
+		SelectedTextColor = (255,255,255,255)
+		SelectedTextBackgroundColor = (10,110,255,255)
+		SelectionPointColor = (110,110,255,255)
+		LimitTextWidth = false
+		SelectionPointWidth = 2
+		NumbersOnly = false
+	}
+
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 440
+		Top = 180
+		Width = 130
+		Height = 40
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 41
+		Text = "Start"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/Black.conf"
+		Left = 320
+		Top = 300
+		Width = 160
+		Height = 30
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		Callback = LeftMouseReleased
+		CallbackId = 42
+		Text = "Back"
+		TextColor = (200,200,200,255)
+		TextSize = 18
+	}
+
+}

@@ -1,0 +1,35 @@
+Window:
+{
+	Button: "Button1"
+	{
+		ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+		Left = 120
+		Top = 160
+		Width = 71
+		Height = 59.2683
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "1"
+		TextColor = (0,0,0,255)
+		TextSize = 36
+	}
+
+	Button: "Button2"
+	{
+		ConfigFile = "data/tgui/widgets/BabyBlue.conf"
+		Left = 200
+		Top = 160
+		Width = 71
+		Height = 60
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Text = "2"
+		TextColor = (0,0,0,255)
+		TextSize = 37
+	}
+
+}
