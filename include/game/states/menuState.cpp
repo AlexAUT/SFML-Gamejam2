@@ -51,7 +51,8 @@ namespace aw
 			if (callback.id > 100 && callback.id < 200)
 			{
 				std::string path = "data/levels/Level" + std::to_string(callback.id - 100) + ".txt";
-				pushState(StateMachine::State_ptr(new GameState(getStateMachine(), mWindow, mSettings, path)));
+				auto state = StateMachine::State_ptr(new GameState(getStateMachine(), mWindow, mSettings, path));
+				pushState(state);
 			}
 		}
 	}
