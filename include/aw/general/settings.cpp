@@ -43,29 +43,39 @@ namespace aw
 				if (line == "[window]")
 				{
 					//Next row = size, format: "width height"
-					std::getline(file, line);
-					std::stringstream sstr(line);
-					sstr >> windowSettings.size.x >> windowSettings.size.y;
+					{
+						std::getline(file, line);
+						std::stringstream sstr(line);
+						sstr >> windowSettings.size.x >> windowSettings.size.y;
+					}
 					//Next row = title
 					std::getline(file, windowSettings.title);
 					//Next row = style
-					std::getline(file, line);
-					sstr = std::stringstream(line);
-					sstr >> windowSettings.style;
+					{
+						std::getline(file, line);
+						std::stringstream sstr(line);
+						sstr >> windowSettings.style;
+					}
 					//Next row = contextSettings format: "depth stencil antialiasing major minor"
-					std::getline(file, line);
-					sstr = std::stringstream(line);
-					sstr >> windowSettings.settings.depthBits >> windowSettings.settings.stencilBits >>
-						windowSettings.settings.antialiasingLevel >> windowSettings.settings.majorVersion >>
-						windowSettings.settings.minorVersion;
+					{
+						std::getline(file, line);
+						std::stringstream sstr(line);
+						sstr >> windowSettings.settings.depthBits >> windowSettings.settings.stencilBits >>
+							windowSettings.settings.antialiasingLevel >> windowSettings.settings.majorVersion >>
+							windowSettings.settings.minorVersion;
+					}
 					//Next row = vsync
-					std::getline(file, line);
-					sstr = std::stringstream(line);
-					sstr >> windowSettings.vsync;
+					{
+						std::getline(file, line);
+						std::stringstream sstr(line);
+						sstr >> windowSettings.vsync;
+					}
 					//Next row = shaders
-					std::getline(file, line);
-					sstr = std::stringstream(line);
-					sstr >> windowSettings.shaders;
+					{
+						std::getline(file, line);
+						std::stringstream sstr(line);
+						sstr >> windowSettings.shaders;
+					}
 					//Read everything
 					file.close();
 					return true;
@@ -89,14 +99,17 @@ namespace aw
 				if (line == "[sound]")
 				{
 					//Next row = enabled
-					std::getline(file, line);
-					std::stringstream sstr(line);
-					sstr >> soundSettings.enabled;
+					{
+						std::getline(file, line);
+						std::stringstream sstr(line);
+						sstr >> soundSettings.enabled;
+					}
 					//Next row = volumes format: "menu game"
-					std::getline(file, line);
-					sstr = std::stringstream(line);
-					sstr >> soundSettings.volumeMusic >> soundSettings.volumeVFX;
-
+					{
+						std::getline(file, line);
+						std::stringstream sstr(line);
+						sstr >> soundSettings.volumeMusic >> soundSettings.volumeVFX;
+					}
 					//Read everything
 					file.close();
 					return true;

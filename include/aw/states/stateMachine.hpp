@@ -31,7 +31,7 @@ namespace aw
 
 	private:
 		std::stack<State_ptr> mStateStack;
-		std::atomic<int> mShouldPopState = 0; //Loading screen is working due to multithreading = protect this var
+		std::atomic<int> mShouldPopState{0}; //Loading screen is working due to multithreading = protect this var
 	};
 }
 

@@ -3,7 +3,7 @@
 
 #include "../../aw/states/state.hpp"
 
-#include <TGUI\TGUI.hpp>
+#include <TGUI/TGUI.hpp>
 
 namespace sf
 {

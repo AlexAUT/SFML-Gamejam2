@@ -4,8 +4,8 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Text.hpp>
 
-#include "general\settings.hpp"
-#include "states\stateMachine.hpp"
+#include "general/settings.hpp"
+#include "states/stateMachine.hpp"
 
 
 namespace aw
